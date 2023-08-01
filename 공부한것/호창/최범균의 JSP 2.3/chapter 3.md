@@ -119,9 +119,7 @@
                     - 디코딩 : `request.setCharacterEncoding(**”utf-8”**)`의 매개변수가 utf-8이므로 utf-8로 디코딩
         - **GET 메소드**
             - **파라미터 인코딩 규칙**
-
-              ![KakaoTalk_20230729_204923042.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8b6f3309-9aa1-42d0-ad8f-a536969ad264/KakaoTalk_20230729_204923042.jpg)
-
+              ![KakaoTalk_20230729_204923042](https://github.com/HoChangSUNG/mentoring/assets/76422685/f32f7ac9-97b4-4e57-8ac2-bc73a6b46f75)
                 - a 태그를 이용한 방법과 HTML FORM을 이용한 방법은 웹페이지의 캐릭터 셋을 이용하여 파라미터를 인코딩
                 - 웹 브라우저에 URL입력하는 방법은 웹 브라우저마다 인코딩할 때 사용할 캐릭터 셋이 다름
                     - 크롬은 UTF-8로 인코딩
@@ -167,9 +165,9 @@
             
 
 ## **리다이렉트를 이용해서 페이지 이동**
-        
-![KakaoTalk_20230729_211939985.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/266a96a8-4e07-4446-889b-82932ca14b06/KakaoTalk_20230729_211939985.jpg)
-        
+
+![KakaoTalk_20230729_211939985](https://github.com/HoChangSUNG/mentoring/assets/76422685/e319d19b-3deb-4966-a7a1-844de2e29cf3)
+
 - response시 리다이렉트 지정 시 지정된 url로 리다이렉트하기 위해 웹브라우저가 웹서버에 해당 url 요청하는 방식으로 동작
  - `response.sendRedirect(String location)`
     - 웹 브라우저가 리다이렉트 하도록 지시
