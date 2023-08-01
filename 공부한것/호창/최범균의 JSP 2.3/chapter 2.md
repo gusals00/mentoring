@@ -5,9 +5,7 @@
 - 웹 페이지 : 웹 브라우저에서 URL에 해당하는 내용이 출력된 것
 - URL : 웹 페이지의 주소를 표현할 때 사용
     - 구성요소
-
-      ![KakaoTalk_20230729_170130138_01.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5d946fa0-832b-47b6-9167-e37d4187c073/KakaoTalk_20230729_170130138_01.jpg)
-
+    ![KakaoTalk_20230729_170130138_01](https://github.com/HoChangSUNG/mentoring/assets/76422685/fd07b02e-1b13-43cd-8b9d-0d0e23ecd3a3)
         - 프로토콜 : 웹 브라우저가 서버와 내용을 주고받을 때 사용할 규칙 이름
         - 서버 이름 : 웹 페이지를 요청할 서버의 이름(도메인 이름, IP주소)
         - 경로 : 웹 페이지의 상세 주소
@@ -18,9 +16,7 @@
 ## 웹 브라우저와 웹 서버
 
 **웹브라우저와 웹 서버의 통신 과정**
-
-![KakaoTalk_20230729_170130138.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d22fb0e3-fe92-4195-a650-a1978f376015/KakaoTalk_20230729_170130138.jpg)
-
+![KakaoTalk_20230729_170130138](https://github.com/HoChangSUNG/mentoring/assets/76422685/fca1f262-e950-4c67-8e66-7fda6623aa4c)
 1. DNS 서버에 도메인 이름에 대한 IP 주소 요청
 2. IP 주소 응답
 3. URL에 맞는 웹 서버에 웹 페이지를 요청
