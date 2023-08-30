@@ -116,7 +116,7 @@ class MovieLister...
 - 위 코드처럼 생성자에 구체적인 클래스를 생성한다.
 - 하지만 여기서 문제가 발생한다.만약 `MovieFinder`가 영화를 찾을 때 위 코드처럼 텍스트 파일에서 찾는 것이 아니라 db, xml 파일에서 데이터를 가져오려면 다른 적절한 MovieFinder 인터페이스 구현체를 얻을 수 있는 방법이 필요하다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6656aa90-a106-454d-8758-b23889a5921d/Untitled.png)
+![Untitled (1)](https://github.com/HoChangSUNG/mentoring/assets/76422685/06f7e60f-7c27-4227-8d27-9b73a7d994aa)
 
 위 그림은 위 상황에 해당하는 의존성을 보여준다. `MovieLister` 클래스는 `MovieFinder` 인터페이스와 그 구현 클래스에 의존하고 있다. 
 
@@ -126,7 +126,7 @@ class MovieLister...
 
 **플러그인 방식**은 아래 사진과 같이 컴파일 시점이 아닌 구성하는 시점(런타임)에 사용할 클래스(인터페이스 구현체)를 연결해주는 것이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/768dcf4f-a4cc-4356-9f37-9715646ddd6d/Untitled.png)
+![Untitled (2)](https://github.com/HoChangSUNG/mentoring/assets/76422685/c12324fb-d706-4ca0-9e14-78381c08b1c5)
 
 이렇게 플러그인을 사용하여 `MovieLister` 클래스가 구현 클래스를 알지 못하지만 작업을 수행하기 위해 특정 구현체와 통신할 수 있도록 링크를 만드는 방법이 플러그인이다.
 
@@ -158,7 +158,7 @@ ioc는 프레임워크에서 공통적으로 사용되는 방식이다.
 
 dependency injection의 기본 아이디어는 finder 인터페이스에 대한 적절한 구현체를 별도의 객체인 assembler를 이용하여 finder 인터페이스에 채워주고 아래와 같은 형태로 종속성 다이어그램을 만드는 것이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/598b6e5a-f63b-4ca2-a2d9-874d11689b35/Untitled.png)
+![Untitled (3)](https://github.com/HoChangSUNG/mentoring/assets/76422685/448e96ac-0fae-423f-b74f-1a329f4d3783)
 
 dependency injection은 생성자 방식, setter 방식, 인터페이스 방식이 있다.
 
