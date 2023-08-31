@@ -183,6 +183,49 @@
     - MSS(Maximum Segment Size) : TCP에서 애플리케이션의 데이터를 분할하는 단위  
         ![KakaoTalk_20230830_214120991](https://github.com/HoChangSUNG/mentoring/assets/76422685/cc52c0c4-3598-41e8-994f-9e1df2f7af6e)
 
+### UDP
+
+- 애플리케이션에 데이터를 배분하기 위해 사용하는 프로토콜
+- 신뢰성이 높지 않고, 크기가 큰 데이터를 분할하는 기능이 없지만, 데이터 전송이 빠르다는 장점이 있음
+    - 크기가 큰 데이터는 애플리케이션 쪽에서 적절한 크기로 쪼개야 함
+- IP 전화의 음성 데이터와 같은 **실시간 데이터 전송**을 할 때 UDP 사용
+
+### DNS
+
+- 호스트 이름에 대응하는 IP 주소를 자동으로 구해주는 역할, 이름 해석을 제공
+    - 이름 해석 : 호스트명에서 IP 주소를 구하는 방법
+- DNS 서버 : 호스트명과 IP 주소의 대응 관계를 등록, 리소스 레코드를 등록
+    - 리소스 레코드 : DNS 서버에 등록하는 정보
+        - 주요 리소스 레코드
+            - A → 호스트명에 대응하는 IP 주소
+            - AAAA → 호스트 명에 대응하는 IPv6 주소
+            - CNAME → 호스트명에 대응하는 별명
+            - MX → 도메인명에 대응하는 메일 서버
+            - NS → 도메인명을 관리하는 DNS 서버
+            - PTR → IP 주소에 대응하는 호스트명
+- **동작 방식**
+    1. DNS 리졸버가 DNS 서버에 IP 주소를 질의
+        - DNS 리졸버 : DNS 서버에 질의하는 기능, 윈도우 등 OS에 내정되어 있음
+    2. 루트 DNS 서버부터 계층을 따라 질의를 반복(재귀 질의)
+    3. 과거에 질의한 결과가 DNS 서버나 DNS 리졸버에 캐시로 남아 있으면 루트 DNS 서버에 질의하지 않아도 됨 
+        
+        ![KakaoTalk_20230831_162740024](https://github.com/HoChangSUNG/mentoring/assets/76422685/0a486dcf-4db6-4e4f-a306-e661a86cf0d4)
+
+
+### DHCP
+
+- 호스트의 TCP/IP 설정을 자동으로 클라이언트에게 제공해주는 프로토콜
+    - TCP/IP 설정 항목 → IP주소 / 서브넷 마스크, 기본 게이트웨이 IP 주소, DNS 서버의 IP 주소
+- **동작 방식(기본적으로 브로드캐스팅)**
+    - DHCP Discover
+        - DHCP 클라이언트가 DHCP 서버를 찾기 위해 DHCP Discover 메시지를 브로드캐스트로 전송
+    - DHCP Offer
+        - DHCP Discover를 수신한 DHCP 서버는 클라이언트에 할당할 IP주소와 서브넷 마스크, 게이트웨이, DNS 정보 등을 포함한 DHCP 메시지를 클라이언트에게 전송
+    - DHCP Request
+        - 하나의 DHCP 서버를 선택하고 해당 서버에게 단말이 사용할 네트워크 정보(IP주소와 서브넷 마스크, 게이트웨이 등)를 요청
+    - DHCP ACK
+        - DHCP 클라이언트로부터 IP 주소를 사용하겠다는 요청을 받으면 DHCP 서버에 해당 IP를 어떤 클라이언트가 언제부터 사용하기 시작했는지 정보를 기록하고 DHCP Request 메시지를 정상적으로 수신했다는 응답  
+    ![KakaoTalk_20230831_162740024_01](https://github.com/HoChangSUNG/mentoring/assets/76422685/f04058f5-e013-4396-a777-7c57458e09ba)
 
 **NAT 참고 자료**  
 https://blog.naver.com/skyhomo/220049937649
