@@ -63,6 +63,6 @@
 2. URL에 포함된 웹서버의 호스트명을 DNS 서버에 질의해 웹서버의 IP 주소를 해석
     - DNS 서버에 질의할 때 DNS 서버의 MAC 주소(호스트의 목적지 MAC 주소 때문)를 구하기 위해 ARP 실행
 3. 웹서버의 IP 주소를 알면 웹브라우저와 WAS간 TCP 커넥션 맺음
-4. TCP 커넥션 맺은 후, HTTP 리퀘스트, HTTP 리스폰스 주고받음
+4. TCP 커넥션 맺은 후, HTTP 리퀘스트, HTTP 리스폰스 주고받음  
   ![1](https://github.com/HoChangSUNG/mentoring/assets/76422685/825ef164-86dc-487b-b267-ec834fefcb88)
  ![2](https://github.com/HoChangSUNG/mentoring/assets/76422685/8de9f1ad-931f-4e09-adb5-e6b63d1c79ce)
