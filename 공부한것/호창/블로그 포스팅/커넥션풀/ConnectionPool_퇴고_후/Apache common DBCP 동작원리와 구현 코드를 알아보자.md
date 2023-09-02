@@ -2,6 +2,9 @@
 
 ## 서론
 
+멘토님의 피드백을 바탕으로 [기존 커넥션 풀 관련 글](https://github.com/HoChangSUNG/mentoring/blob/main/%EA%B3%B5%EB%B6%80%ED%95%9C%EA%B2%83/%ED%98%B8%EC%B0%BD/%EB%B8%94%EB%A1%9C%EA%B7%B8%20%ED%8F%AC%EC%8A%A4%ED%8C%85/%EC%BB%A4%EB%84%A5%EC%85%98%ED%92%80/ConnectionPool_%ED%87%B4%EA%B3%A0_%EC%A0%84.md)을 수정하여 다시 작성하였다.  
+또한 기존 글에 대한 [멘토님의 피드백과 어떻게 피드백을 반영했는지 깃허브](https://github.com/HoChangSUNG/mentoring/blob/main/%EA%B3%B5%EB%B6%80%ED%95%9C%EA%B2%83/%ED%98%B8%EC%B0%BD/%EB%B8%94%EB%A1%9C%EA%B7%B8%20%ED%8F%AC%EC%8A%A4%ED%8C%85/%EC%BB%A4%EB%84%A5%EC%85%98%ED%92%80/%EC%BB%A4%EB%84%A5%EC%85%98%20%ED%92%80%20%EA%B8%80%20%ED%94%BC%EB%93%9C%EB%B0%B1%20%EB%B0%8F%20%EB%B0%98%EC%98%81%EC%82%AC%ED%95%AD.md)에 정리해두었다. 
+
 Commons-dbcp의 속성들을 알아보자 그 후, Commons-dbcp의 동작 방식과 그 동작 방식이 진짜인지 구현 코드를 알아보자.
 
 ## 속성
