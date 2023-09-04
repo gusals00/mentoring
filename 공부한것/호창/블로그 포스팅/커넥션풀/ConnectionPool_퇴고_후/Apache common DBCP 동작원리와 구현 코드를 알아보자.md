@@ -50,7 +50,8 @@ Commons-dbcp의 속성들을 알아보자 그 후, Commons-dbcp의 동작 방식
 
 Commons DBCP 내부 코드는 Connection과 timestamp를 wraping한 ObjectTimeStampPair라는 클래스가 존재하고, CursorableLinkedList의 요소를 삽입, 삭제하고 다음과 같은 그림으로 이루어져 있다.
 
-!https://velog.velcdn.com/images/hochang/post/3b6d172a-578b-40c3-9b7b-8fb238e4ecfd/image.png
+![image](https://github.com/HoChangSUNG/mentoring/assets/76422685/64a9cc3e-8aba-4636-905e-362eacbe541a)
+
 
 이제 실제 코드로 CursorableLinkedList에서 요소를 pop하여 스레드에 할당하고, 스레드가 CursorableLinkedList에 커넥션을 반환하는지 확인해보자
 
