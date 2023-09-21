@@ -9,7 +9,7 @@ java는 객체 지향 언어이다. 따라서 객체를 중심으로 하기 때�
 
 이러한 궁금증을 해결해보기 위해 primitive type이 존재하는 이유를 알아보자
 
-**primitive type 존재 이유는 성능과 간단함(Simplicity)**이다.
+**primitive type 존재 이유는 성능과 간단함(Simplicity)** 이다.
 
 먼저 **간단함 측면**에서 알아보고 **성능 측면**에서 2가지 이유를 알아보자  
 그 후 **primitive type과 wrapper type의 성능 측정 결과**를 통해 primitive type이 존재하는 이유를 알아보자
@@ -28,14 +28,14 @@ wrapper type에 비해 primitive type이 쉽게 이해할 수 있고, 개발자�
 
   wrapper type은 객체이기 때문에 heap 영역에 메모리를 할당하고 객체를 생성한다. 객체를 생성하기 위해서는 객체를 생성하는데 비용이 들게 된다. 물론 객체를 생성하는 비용이 성능에 큰 영향을 미치지 않을 수도 있다.  
   하지만 수많은 객체를 생성하거나, 멀티 스레딩 환경에서 동시에 객체를 생성해야 하는 경우에는 객체를 생성하는데 시간이 걸려 성능이 저하될 수 있다.  
-  따라서 이러한 객체 생성 비용을 줄이기 위해서 wrapper type이 필요한 경우가 아니라면 primitive type을 사용한다.
+  따라서 이러한 **객체 생성 비용을 줄이기 위해서** wrapper type이 필요한 경우가 아니라면 primitive type을 사용한다.
 
 - **접근 속도**
 
   primitive type과 wrapper type을 사용하기 위해 각각의 type에 접근할 때 메모리 관점에서 접근 속도에 대해 생각해보자.  
   primitive type은 stack 영역에 할당되고, 리터럴이기 때문에 메모리 자체에 값이 저장된다. 따라서  stack 영역에 접근하면 해당 primitive type 값을 바로 접근할 수 있다.  
   그에 반해 wrapper type은 객체이기 때문에 stack 영역에 접근하여 wrapper 객체가 저장된 heap 영역의 위치를 구한 후, heap 영역에 위치하는 wrapper객체에 접근할 수 있다.  
-  이처럼 wrapper class는 stack 영역에 접근한 후 heap 영역에 추가로 접근해야 하지만, primitive type은 stack 영역에만 접근하면 되기 때문에 접근 속도가 primitive type이 더 빠르다.
+  이처럼 **wrapper class는 stack 영역에 접근한 후 heap 영역에 추가로 접근해야 하지만, primitive type은 stack 영역에만 접근하면 되기 때문에 접근 속도가 primitive type이 더 빠르다.**
 
 <br>
 
