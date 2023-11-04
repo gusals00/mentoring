@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost/testdb"/>
+        <property name="username" value=""/>
+        <property name="password" value=""/>
+    </bean>
+
+    <bean id="userDao" class="com.example.toby_spring.chapter5.user.dao.UserDaoJdbc">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean id="userLevelUpgradePolicy" class="com.example.toby_spring.chapter5.user.service.NormalUserLevelUpgradePolicy">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="userService" class="com.example.toby_spring.chapter5.user.service.UserService">
+        <property name="userDao" ref="userDao"/>
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="userLevelUpgradePolicy" ref="userLevelUpgradePolicy"/>
+        <property name="mailSender" ref="mailSender"/>
+    </bean>
+
+    <bean id="mailSender" class="com.example.toby_spring.chapter5.user.service.test.DummyMailSender"/>
+
+</beans>
